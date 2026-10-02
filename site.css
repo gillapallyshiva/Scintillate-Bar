@@ -847,7 +847,7 @@ width: 50%;
 }
 .info-inner2{
     display: flex;
-    height: 300px;
+    height: 360px;
       background-color: var(--color_1);
       gap:20px;   
   }
@@ -857,12 +857,12 @@ width: 50%;
 .info-f1{
     background-image: url(images/2341.jpg);
      width: 50% !important;
-     height: 300px !important;
+     height: 360px !important;
 }
 .info-f2 {
     width: 50% !important;
     padding: 50px 40px;
-    height: 300px !important;
+    height: 360px !important;
     max-width: 50% !important;
     display: flex;
     flex-direction: column;
@@ -872,8 +872,9 @@ width: 50%;
 .btn-2 {
     width: 200px !important;
     height: 56px !important;
+    min-height: 56px !important;
     background-color: var(--color_3);
-    padding: 12px 30px !important;
+    padding: 20px 30px !important;
     margin-top: 20px;
     text-align: center;
     color: var(--color_1) !important;
@@ -1561,15 +1562,139 @@ footer{
 .footer-2{
     width: 33%;
     background-color: var(--color_2);
+    padding: 40px 30px;
+
 }
+.footer-2 p, .footer-2 a{
+    color: var(--color_3);
+}
+
 .footer-3{
     width: 33%;
     background-color: var(--color_4);
     border-radius: 0px 20px 20px 0px;
+    }
+.footer-2 h3{
+    color: var(--color_3);
 }
 
-.footer-5{
-    width: 33%;
-    background-color: var(--color_4);
-    border-radius: 0px 20px 20px 0px;
+.flag{
+    
+    width: 100% !important;
+    background-color: var(--color_3);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
+.flag-col{
+     height: 600px !important;
+    width: 100% !important;
+    background-color: var(--color_3);
+    position: relative;
+    z-index: 1;
+}
+.flag-green{
+    position: absolute;
+    content: '';
+    width: 400px;
+    height: 50px;
+    left: calc(50% - 200px);
+    bottom: 0;
+    background-color:#046A38;
+    transition: 2s !important;
+    border-radius: 20px 20px 0px 0px;
+}
+.flag-white{
+    position: absolute;
+    content: '';
+    width: 320px;
+    height: 50px;
+    left: calc(50% - 160px);
+    bottom: 50px;
+    background-color:var(--color_3);
+    transition: 2s !important;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.flag-red{
+    position: absolute;
+    content: '';
+    width: 280px;
+    height: 50px;
+    left: calc(50% - 140px);
+    bottom: 100px;
+    background-color:#FF6820;
+    transition: 2s !important;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.flag-circle{
+   position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    left: calc(50% - 25px);
+    bottom: 50px; 
+    background-image: url(images/Shoka\ Chakra.png);
+    background-size: contain;
+
+}
+.flag-span {
+    position: absolute;
+    content: '';
+    width: 430px;
+    height: 460px;
+    left: calc(50% - 385px);
+    top: 0px;
+    background-image: url(images/flag.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: flag-0001 2s linear alternate;
+   
+}
+@keyframes flag-0001{
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform:translateY(-100px);
+    }
+}
+.flag::before {
+    position: absolute;
+    content: 'INDEPENDENCE DAY';
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 220px !important;
+    bottom: auto !important;
+    font-family: inherit;
+    font-size: 9vw;
+    font-weight: 700;
+    color: var(--color_2);
+    opacity: 0.1;
+    text-align: center;
+    z-index: 2;
+   
+}
+.flag .container{
+    padding-bottom:0 !important;
+}
+
+.flag::after {
+    position: absolute;
+    content: 'Note: Bar Closed';
+    width: 40%;
+    height: auto;
+    right: 10%;
+    bottom: 20px !important;
+      font-family: inherit;
+    font-size:30px;
+    font-weight: 700;
+    color: var(--color_2);
+  opacity: 0.5;
+    text-align: right;
+    z-index: 2;
+   
+}
+
