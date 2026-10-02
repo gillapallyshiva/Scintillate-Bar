@@ -1,1 +1,3 @@
-# Scintillate--Bar
+# Scintillate-Bar
+Bar
+
