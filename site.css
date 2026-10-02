@@ -1635,7 +1635,7 @@ footer{
     height: 50px;
     left: calc(50% - 25px);
     bottom: 50px; 
-    background-image: url(src/assets/Flag.png);
+    background-image: url(src/assets/Shoka\ Chakra.png);
     background-size: contain;
 
 }
@@ -1646,7 +1646,7 @@ footer{
     height: 460px;
     left: calc(50% - 385px);
     top: 0px;
-    background-image: url(src/assets/flag.png);
+    background-image: url(src/assets/Flag.png);
     background-size: contain;
     background-repeat: no-repeat;
     animation: flag-0001 2s linear alternate;
