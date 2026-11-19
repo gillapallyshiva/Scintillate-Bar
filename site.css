@@ -4,6 +4,63 @@
     --color_3: #ffffff   !important;
     --color_4: #bf9b30 !important;
 }
+.hamburger {
+  display: none;
+}
+@media (max-width: 1024px) {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    background: #222;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+  .card-header-tabs{
+    display:none !important;   
+  }
+}
+
 
 p{
 font-size: 18px !important;
@@ -17,7 +74,7 @@ margin-bottom: 0 !important;
 .row-1 .col-1{
     width:50% !important;
  position: relative;
-    height: 800px;
+    height: 880px;
      
 }
 .col-1 img {
@@ -141,9 +198,11 @@ header{
 }
 .logo-1 {
     position: absolute;
-    left: -80% !important;
-    top: -30px;
-   
+    left: 50% !important;
+    top: 10px !important;
+    z-index: 1;
+    right: auto;
+    transform: translateX(-70%);
 }
 .logo-1 img{
     width: 200px !important;
@@ -587,7 +646,7 @@ font-size: 1.6rem;
 display: none;
 }
 #click{
-display: none;
+display: none !important;
 }
 
 .road::after {
@@ -655,7 +714,7 @@ background-size: contain;
     background-color: var(--color_1);
     
     padding: 12px 30px !important;
-    margin: 20px auto !important;
+    margin: 20px auto 0 !important;
     text-align: center;
     color: #fff !important;
     text-decoration: none;
@@ -1550,7 +1609,7 @@ footer{
 .footer-1 {
     width: 33%;
     background-color: var(--color_3);
-    height: 300px;
+    height: 336px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1565,7 +1624,7 @@ footer{
     padding: 40px 30px;
 
 }
-.footer-2 p, .footer-2 a{
+.footer-2 p, .footer-2 a, .footer-3 p{
     color: var(--color_3);
 }
 
@@ -1573,8 +1632,9 @@ footer{
     width: 33%;
     background-color: var(--color_4);
     border-radius: 0px 20px 20px 0px;
+    padding: 40px 30px;
     }
-.footer-2 h3{
+.footer-2 h3, .footer-3 h3{
     color: var(--color_3);
 }
 
@@ -1603,6 +1663,15 @@ footer{
     background-color:#046A38;
     transition: 2s !important;
     border-radius: 20px 20px 0px 0px;
+    animation: green-flg 2s linear alternate;
+}
+@keyframes green-flg{
+    0%{
+        transform:translateY(-600px);
+    }
+    100%{
+        transform:translateY(-0);
+    }
 }
 .flag-white{
     position: absolute;
@@ -1615,6 +1684,8 @@ footer{
     transition: 2s !important;
     border-radius: 20px 20px 0px 0px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: green-flg 3.5s  linear alternate;
+   
 }
 .flag-red{
     position: absolute;
@@ -1627,6 +1698,8 @@ footer{
     transition: 2s !important;
     border-radius: 20px 20px 0px 0px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     animation: green-flg 4s  linear alternate;
+   
 }
 .flag-circle{
    position: absolute;
@@ -1637,6 +1710,8 @@ footer{
     bottom: 50px; 
     background-image: url(src/assets/Shoka-Chakra.png);
     background-size: contain;
+    animation-delay: 0s !important;
+    animation: green-flg 3.5s  linear alternate;
 
 }
 .flag-span {
@@ -1649,12 +1724,13 @@ footer{
     background-image: url(src/assets/Flag.png);
     background-size: contain;
     background-repeat: no-repeat;
-    animation: flag-0001 2s linear alternate;
+    animation: flag-0001 5s linear alternate;
+    animation-delay: 0s !important;
    
 }
 @keyframes flag-0001{
     0%{
-        transform:translateY(-100%);
+        transform:translateY(-600px);
     }
     100%{
         transform:translateY(-100px);
@@ -1694,7 +1770,339 @@ footer{
     color: var(--color_2);
   opacity: 0.5;
     text-align: right;
-    z-index: 2;
+    z-index: 2 !important;
    
+}
+.contact-icon, .clock{
+    width: 50px !important;
+    height: 50px !important;
+    margin-bottom: 20px !important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
+@media only screen and (max-width: 767px) {
+    .hero::after {
+       width: 50px !important;
+    height: 90px !important;
+    right: 30px !important;
+  
+}
+
+.light-row::after {
+   
+    filter: blur(30px) !important;
+  
+}
+.light-row {
+   
+    width: 50px !important;
+    height: 100px !important;
+    left: 0px !important;
+
+}
+.logo-1 img {
+    width: 120px !important;
+    height: auto !important;
+}
+.logo-1 {
+      transform: translateX(-50%);
+}
+.row-1 .col-1 {
+    width: 100% !important;
+    position: relative;
+    height: 500px !important;
+}
+.hero::before {
+   
+    width: 50% !important;
+       clip-path: polygon(100% 0%, 50% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+}
+.beer-row .beer2 .blueberry-beer {
+    font-size: 20px !important;
+   
+}
+.beer-row .beer1 {
+    width: 20%;
+  
+}
+.beer-row .beer2 {
+    width: 60%;
+      padding-left: 30px;
+      display: flex;
+    align-items: center;
+}
+.beer-row .beer1 img {
+    width: 55px !important;
+    height: 55px !important;
+   
+}
+.beer-row .beer3 .blueberry-beer {
+    font-size: 20px !important;
+  
+}
+.beer-row{
+    animation: none !important;
+}
+.movingCar {
+    width: 200px !important;
+    height: auto !important;
+    animation: movingCar 6s linear infinite;
+}
+.info {
+    display: flex;
+        flex-direction: column !important;
+}
+.info-col {
+    width: 100% !important;
+}
+.red {
+    width: 18px;
+    height: 18px;
+    right: 18px;
+    top: 7px;
+}
+.orage {
+    width: 18px;
+    height: 18px;
+    right: 18px;
+    top: 31px;
+}
+.green {
+    width: 18px;
+    height: 18px;
+    right: 18px;
+    top: 55px;
+   }
+   .col-1 img {
+    max-width: 250px !important;
+    max-height: 250px !important;
+    left: calc(50% - 125px);
+    top: calc(50% - 70px) !important;
+}
+.row-1 .col-1 {
+    width: 100% !important;
+    position: relative;
+    padding-top: 100px !important;
+    height: 450px !important;
+}
+.row-1 .col-2 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-right: 35px !important;
+    padding-left: 40px !important;
+    width: 100% !important;
+    max-height: 100px !important;
+}
+h1 {
+    font-size: 11vw !Important;
+    line-height: 1.3 !important;
+    z-index: 7;
+}
+.row-1 {
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-size: 40px !Important;
+ 
+}
+.info-inner{
+    padding: 40px 15px !important;
+}
+.info-inner2 {
+    
+    min-height: 480px !important;
+        gap: 0px;
+    flex-direction: column;
+}
+.info-f1 {
+    
+    width: 100% !important;
+    height: 270px !important;
+    min-height: 200px !important;
+}
+
+.info-f2 {
+    width: 100% !important;
+    padding: 40px 15px;
+    height: 360px !important;
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.verti-bottle .container {
+       flex-direction: column;
+}
+.left-col {
+    width: 100%;
+    padding: 40px 15px;
+    align-items: center;
+    border-radius: 20px;
+  
+}
+.text-1 {
+    letter-spacing: 3px;
+   }
+.text-1::before {
+      height: 30px;
+    left: calc(50% - 20%);
+    bottom: -30px;
+}
+.team-h2 h2 {
+    color: var(--color_1) !important;
+    text-align: center;
+    line-height: 1;
+    margin-top: 30px;
+    font-size: 30px !important;
+}
+.evnts h2::first-letter, .team-h2 h2:first-letter{
+    font-size: 50px !important;
+}
+.team .container{
+    flex-direction: column;
+}
+.team .team-main, .team .team-main-1, .team .team-main-2, .team .team-main-3 {
+    width: 100% !important;
+    position: relative;
+    z-index: 1;
+}   
+.pods-container {
+       flex-direction: column;
+}
+.usps-1,.usps-2, .usps-3 {
+    width: 100% !important;
+     height: 330px !important;
+    
+}
+.flag-green {
+     width: 300px;
+       left: calc(50% - 150px);
+   
+}
+.flag-white {
+    width: 240px;
+      left: calc(50% - 120px);
+  
+}
+.flag-red {
+      width: 200px;
+    left: calc(50% - 100px);
+  }
+  .flag-span {
+       width: 210px;
+    height: 210px;
+    left: calc(50% - 177px);
+    top: auto;
+    bottom: 150px !important;
+   
+}
+.review-container {
+    max-width: 1380px !important;
+    padding: 40px 15px;
+    display: flex;
+    margin: 0 auto !important;
+    gap: 30px !important;
+    flex-direction: column;
+}
+.reviw-1, .reviw-2 {
+    width: 100% !important;
+    padding: 120px 15px 140px 35px !important;
+   
+}
+.cta-img {
+    width: 100% !important;
+    
+    height: 440px !important;
+    display: flex;
+    min-width: 300px;
+    left: 50% !important;
+    transform: translateX(-20%);
+    right: auto;
+   
+    padding: 40px 30px !important;
+    
+}
+.cta-1, .cta-2 {
+    width: 100% !important;
+      padding: 80px 0px !important;
+   
+}
+.cta-img {
+    width: 100% !important;
+    min-height: 440px !important;
+    display: flex;
+    min-width: 330px;
+    left: 50% !important;
+    transform: translateX(-20%);
+    right: auto !important;
+    padding: 40px 15px !important;
+}
+.client-1 h5 {
+    font-size: 20px !important;
+   }
+   .review-container p{
+    font-size: 15px !important;
+   }
+   .client-1 {
+    width: 100% !important;
+    margin: 0 auto;
+      padding: 20px !important;
+    margin-bottom: 30px !important;
+}
+.client-1::before {
+    position: absolute;
+        border-top: 0 !important;
+       left: -25px !important;
+    z-index: -1 !important;
+    bottom: -25px !important;
+}
+.container-02 {
+    max-width: 1400px !important;
+    margin: 0 auto;
+    display: flex;
+    padding:40px 15px  !important;
+    flex-direction: column;
+}
+.footer-1 {
+    width: 100%;
+       height: 200px;
+        border-radius: 20px 20px 0 0;
+}
+ .footer-2 {
+    width: 100%;
+       height: 230px;
+        border-radius: 0px;
+}
+ .footer-3 {
+    width: 100%;
+       height: 200px;
+        border-radius: 0 0 20px 20px ;
+        
+}
+.container-02{
+    background-color: var(--color_1);
+}
+.flag-col {
+    height: 400px !important;
+    width: 100% !important;
+    background-color: var(--color_3);
+    position: relative;
+    z-index: 1;
+}
+.flag::after {
+      width: 50%;
+    top: 20px !important;
+      font-size: 21px;
+    opacity: 0.3 !important;
+  }
+  .evnts {
+    padding-top: 40px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
 }
 
