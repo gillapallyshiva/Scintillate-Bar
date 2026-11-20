@@ -1921,7 +1921,7 @@ text-align: center;
 }
 .light-row {
     width: 120px !important;
-    height: 200px;
+    height: 200px !important;
  
 }
 }
